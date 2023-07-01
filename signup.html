@@ -1,0 +1,137 @@
+<!--this will open after javascript login page code -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign up page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0c7c7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333333;
+            font-family: 'Bree Serif', serif;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            margin-top: 50px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+            text-align: right;
+            color: #555555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 8px 20px;
+            background-color: #824caf;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            table {
+                margin-top: 30px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CREATE YOUR ACCOUNT</h1>
+        <table cellspacing="2" cellpadding="8" border="0">
+            <tr>
+                <td style="text-align: left;">NAME</td>
+                <td><input type="text" placeholder="Enter your name" id="n1"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">EMAIL</td>
+                <td><input type="text" placeholder="Enter your email id" id="e1"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">SET PASSWORD</td>
+                <td><input type="password" placeholder="Set your password" id="p1"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">CONFIRM PASSWORD</td>
+                <td><input type="password" placeholder="Confirm your password" id="p2"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Create" onclick="create_account()"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+        function create_account() {
+            var n = document.getElementById("n1").value;
+            var e = document.getElementById("e1").value;
+            var p = document.getElementById("p1").value;
+            var cp = document.getElementById("p2").value;
+
+            var letter = /^[A-Za-z\s]+$/;
+            var email_val = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+            if (n == "" || e == "" || p == "" || cp == "") {
+                alert("Enter details correctly");
+            } else if (!letter.test(n)) {
+                alert("Name is incorrect, it must contain alphabet characters only");
+            } else if (!email_val.test(e)) {
+                alert("Invalid email format");
+            } else if (p != cp) {
+                alert("Password does not match");
+            } else if (p.length > 12) {
+                alert("Password maximum length is 12");
+            } else if (p.length < 6) {
+                alert("Password minimum length should be 6");
+            } else {
+                alert("Your account has been successfully created");
+                window.location = "http://127.0.0.1:3002/index.html/";
+            }
+        }
+    </script>
+
+</body>
+</html>

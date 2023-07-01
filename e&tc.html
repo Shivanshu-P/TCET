@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <title>TCET</title>
+  <style>
+    #logo {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #418ee0;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .column {
+      border: 5px solid #418ee0;
+      box-sizing: border-box;
+      padding: 5px;
+      flex-basis: 30%;
+      background-color: #d6dce2;
+      border-radius: 0.5rem;
+    }
+
+    .BoxHeading {
+      background-color: #055dff;
+      color: white;
+      padding: 2px;
+      text-align: center;
+      border-radius: 0.5rem;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid rgb(146, 15, 15);
+    }
+
+    h1 {
+      color: #055dff;
+      text-align: center;
+      text-decoration: underline;
+      margin-top: 30px;
+    }
+
+    table {
+      margin: auto;
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    thead {
+      background-color: #418ee0;
+      color: white;
+    }
+
+    tbody {
+      background-color: #ee5979;
+      color: #ffffff;
+    }
+
+    .carousel-item img {
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #003366;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img id="logo" src="images/E&TC.png" alt="TCET Logo">
+  </header>
+
+  <!-- flex box/equal column -->
+  <div class="container">
+    <div class="column">
+      <h2 class="BoxHeading">About Us</h2>
+      <p>Head of department and faculty members of the department are committed to foster the growth of intellectually
+        capable, innovative and entrepreneurial professionals, who shall contribute to the growth of technology in
+        partnership with industry and develop and harness it for the welfare of the nation and mankind.</p>
+    </div>
+    <div class="column">
+      <h2 class="BoxHeading">Mission</h2>
+      <p>To impart professional education endowed with human values using active learning techniques to transform the
+        students to be competent and committed engineers meeting the current and future demands and capable of providing
+        engineering solutions with social sensitivity.</p>
+    </div>
+    <div class="column">
+      <h2 class="BoxHeading">Vision</h2>
+      <p>“The department of Electronics and Telecommunication Engineering envisions developing internationally competent
+        professionals with a sense of responsibility and social sensitivity.”</p>
+    </div>
+  </div>
+
+  <h1>E&amp;TC TOPPER LIST</h1>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">ACADEMIC YEAR</th>
+        <th scope="col">NAME</th>
+        <th scope="col">SCORE</th>
+        <th scope="col">CGPA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>2021-22</th>
+        <td>Shivam Pandey</td>
+        <td>490/500</td>
+        <td>9.8</td>
+      </tr>
+      <tr>
+        <th>2020-21</th>
+        <td>Aditya Maurya</td>
+        <td>470/500</td>
+        <td>9.6</td>
+      </tr>
+      <tr>
+        <th>2019-20</th>
+        <td>Shivanshu Pandey</td>
+        <td>480/500</td>
+        <td>9.7</td>
+      </tr>
+      <tr>
+        <th>2018-19</th>
+        <td>Vikas Gurav</td>
+        <td>492/500</td>
+        <td>9.8</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>Our Department lab</h1>
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/dld.jpg" class="d-block w-100" alt="Digital Electronics Lab">
+      </div>
+      <div class="carousel-item">
+        <img src="images/img.jpg" class="d-block w-100" alt="Student Images">
+      </div>
+      <div class="carousel-item">
+        <img src="images/pro.jpg" class="d-block w-100" alt="Project Lab">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <footer>
+    <p>Contact us at TCET</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
+
